@@ -32,10 +32,21 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise'
+gem 'devise', '~> 3.4.0'
 
 
-group :development do
+group :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'faker'
+  gem 'capybara'
+  # gem 'guard-rspec', '~>3.0'
+  gem 'launchy'
+  gem 'shoulda-matchers'
+  # gem 'cucumber-rails', :require => false
+  gem 'webrat'
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
 
 end
 
