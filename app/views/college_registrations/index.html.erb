@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing College Registrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Adress</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>College type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @college_registrations.each do |college_registration| %>
+      <tr>
+        <td><%= college_registration.name %></td>
+        <td><%= college_registration.description %></td>
+        <td><%= college_registration.adress %></td>
+        <td><%= college_registration.phone %></td>
+        <td><%= college_registration.email %></td>
+        <td><%= college_registration.college_type %></td>
+        <td><%= link_to 'Show', college_registration %></td>
+        <td><%= link_to 'Edit', edit_college_registration_path(college_registration) %></td>
+        <td><%= link_to 'Destroy', college_registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New College registration', new_college_registration_path %>

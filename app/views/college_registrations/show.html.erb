@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @college_registration.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @college_registration.description %>
+</p>
+
+<p>
+  <strong>Adress:</strong>
+  <%= @college_registration.adress %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @college_registration.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @college_registration.email %>
+</p>
+
+<p>
+  <strong>College type:</strong>
+  <%= @college_registration.college_type %>
+</p>
+
+<%= link_to 'Edit', edit_college_registration_path(@college_registration) %> |
+<%= link_to 'Back', college_registrations_path %>
