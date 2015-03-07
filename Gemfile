@@ -36,8 +36,8 @@ gem 'devise', '~> 3.4.0'
 
 
 group :test do
-  gem 'factory_girl_rails'
-  gem 'rspec-rails', '~> 3.0'
+  # gem 'factory_girl_rails'
+  # gem 'rspec-rails', '~> 3.0'
   gem 'faker'
   gem 'capybara'
   # gem 'guard-rspec', '~>3.0'
@@ -60,5 +60,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 

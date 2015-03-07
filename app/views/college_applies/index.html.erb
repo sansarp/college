@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing College Applies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Course</th>
+      <th>College session</th>
+      <th>Apply date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @college_applies.each do |college_apply| %>
+      <tr>
+        <td><%= college_apply.name %></td>
+        <td><%= college_apply.course %></td>
+        <td><%= college_apply.college_session %></td>
+        <td><%= college_apply.apply_date %></td>
+        <td><%= link_to 'Show', college_apply %></td>
+        <td><%= link_to 'Edit', edit_college_apply_path(college_apply) %></td>
+        <td><%= link_to 'Destroy', college_apply, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New College apply', new_college_apply_path %>

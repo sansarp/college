@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @college_apply.name %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @college_apply.course %>
+</p>
+
+<p>
+  <strong>College session:</strong>
+  <%= @college_apply.college_session %>
+</p>
+
+<p>
+  <strong>Apply date:</strong>
+  <%= @college_apply.apply_date %>
+</p>
+
+<%= link_to 'Edit', edit_college_apply_path(@college_apply) %> |
+<%= link_to 'Back', college_applies_path %>

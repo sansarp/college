@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :college_applies
+
   resources :college_registrations
 
   # The priority is based upon order of creation: first created -> highest priority.
