@@ -69,13 +69,13 @@ RSpec.describe CollegeAppliesController, :type => :controller do
 
   describe "POST create" do
     describe "with valid params" do
-      it "creates a new CollegeApply" do
+      it 'creates a new CollegeApply' do
         expect {
           post :create, {:college_apply => valid_attributes}, valid_session
         }.to change(CollegeApply, :count).by(1)
       end
 
-      it "assigns a newly created college_apply as @college_apply" do
+      it 'assigns a newly created college_apply as @college_apply' do
         post :create, {:college_apply => valid_attributes}, valid_session
         expect(assigns(:college_apply)).to be_a(CollegeApply)
         expect(assigns(:college_apply)).to be_persisted
